@@ -22,7 +22,7 @@ state={
             <Aux>
 
            
-           <Burger ingredients={this.state}/>
+           <Burger ingredients={this.state.ingredients}/>
             <div>Build Controls</div>
             </Aux>
         );
