@@ -8,12 +8,15 @@ const burger =(props) =>{
         //transform this strings [salad, meat...] value to an array with as many elements as we have
         //ingrideants for a given ingredient
         .map(igKey => {
+            //console.log(igKey)
 
             return[...Array(props.ingredients[igKey])].map((_, i) => {
+                
                 //igkey == salad, i == 1
                return <BurgerIngredient key={igKey + i} type={igKey}/>
             });
         }).reduce((arr, el) => {
+            console.log(arr)
             return arr.concat(el)
         },[]);
         if(transformedIngredients.length === 0){
