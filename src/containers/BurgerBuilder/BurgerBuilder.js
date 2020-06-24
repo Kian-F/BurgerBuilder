@@ -44,7 +44,7 @@ addIngredientHandler =(type) =>{
 
            
            <Burger ingredients={this.state.ingredients}/>
-            <BuildControls/>
+            <BuildControls ingredinetAdded={this.addIngredientHandler}/>
             </Aux>
         );
     }
