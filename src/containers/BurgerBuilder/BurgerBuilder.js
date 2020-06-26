@@ -55,6 +55,12 @@ removeIngredientHandler = (type) =>{
     this.setState({totalPrice: newPrice, ingredients:updatedIngredients  })
 } 
     render(){
+        const disabledInfo ={
+            ...this.state.ingredients
+        };
+        for(let key in disabledInfo){
+            disabledInfo[key] = disabledInfo[key] <= 0
+        }
         return(
             <Aux>
 
@@ -62,7 +68,9 @@ removeIngredientHandler = (type) =>{
            <Burger ingredients={this.state.ingredients}/>
             <BuildControls 
             ingredinetAdded = {this.addIngredientHandler}
-            ingredinetRemoved = {this.removeIngredientHandler}/>
+            ingredinetRemoved = {this.removeIngredientHandler}
+            disabled={disabledInfo}
+            />
             </Aux>
         );
     }

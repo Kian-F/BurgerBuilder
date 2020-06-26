@@ -19,7 +19,8 @@ const buildControls = (props) => (
         //type={ctrl.type}
 
         added={ () => props.ingredinetAdded(ctrl.type)}
-        removed ={ () => props.ingredinetRemoved(ctrl.type)} />
+        removed ={ () => props.ingredinetRemoved(ctrl.type)}
+        disabled = {props.disabled[ctrl.type]} />
     ))}
     
 </div>
