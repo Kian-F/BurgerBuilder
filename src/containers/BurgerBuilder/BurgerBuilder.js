@@ -25,7 +25,8 @@ state={
         meat: 0
     },
     totalPrice: 7,
-    purchasable: false
+    purchasable: false,
+    purchased : false
 }
 
 updatePurchaseState (ingredients){
